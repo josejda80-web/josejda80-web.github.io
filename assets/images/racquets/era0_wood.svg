@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" width="400" height="700">
+  <defs>
+    <radialGradient id="studioBg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+    <linearGradient id="woodGrain" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5c3d1e"/>
+      <stop offset="15%" stop-color="#7a4f28"/>
+      <stop offset="30%" stop-color="#6b4520"/>
+      <stop offset="45%" stop-color="#8b5e32"/>
+      <stop offset="60%" stop-color="#7a4f28"/>
+      <stop offset="75%" stop-color="#6b4520"/>
+      <stop offset="90%" stop-color="#5c3d1e"/>
+      <stop offset="100%" stop-color="#4a3218"/>
+    </linearGradient>
+    <linearGradient id="woodRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c8a06a"/>
+      <stop offset="30%" stop-color="#8b5e32"/>
+      <stop offset="70%" stop-color="#5c3d1e"/>
+      <stop offset="100%" stop-color="#2a1a0a"/>
+    </linearGradient>
+    <linearGradient id="gutString" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5e8c8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#d4c090" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="leatherGrip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3a2010"/>
+      <stop offset="20%" stop-color="#5a3520"/>
+      <stop offset="40%" stop-color="#4a2a18"/>
+      <stop offset="60%" stop-color="#6a4028"/>
+      <stop offset="80%" stop-color="#4a2a18"/>
+      <stop offset="100%" stop-color="#3a2010"/>
+    </linearGradient>
+    <filter id="rimLight">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="-2" dy="-2"/>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Studio black background -->
+  <rect width="400" height="700" fill="url(#studioBg)"/>
+
+  <!-- Subtle floor reflection shadow -->
+  <ellipse cx="200" cy="640" rx="100" ry="12" fill="#000" opacity="0.6"/>
+
+  <!-- Transform: 45deg axial tilt simulation via skew -->
+  <g transform="translate(200, 350) rotate(-15) translate(-200, -350)">
+
+    <!-- RACQUET HEAD - Oval wood frame -->
+    <!-- Outer frame shadow -->
+    <ellipse cx="202" cy="240" rx="112" ry="148" fill="#1a0d05" opacity="0.8"/>
+
+    <!-- Main wood frame - layered laminate effect -->
+    <ellipse cx="200" cy="238" rx="110" ry="146" fill="url(#woodRim)" stroke="#c8a06a" stroke-width="0.5"/>
+    <!-- Inner frame edge -->
+    <ellipse cx="200" cy="238" rx="105" ry="141" fill="url(#woodGrain)"/>
+    <!-- Frame inner edge -->
+    <ellipse cx="200" cy="238" rx="98" ry="134" fill="#030712"/>
+
+    <!-- Wood grain laminate lines -->
+    <ellipse cx="200" cy="238" rx="107" ry="143" fill="none" stroke="#8b5e32" stroke-width="0.4" opacity="0.5"/>
+    <ellipse cx="200" cy="238" rx="103" ry="139" fill="none" stroke="#6b4520" stroke-width="0.3" opacity="0.4"/>
+    <ellipse cx="200" cy="238" rx="109" ry="145" fill="none" stroke="#c8a06a" stroke-width="0.3" opacity="0.3"/>
+
+    <!-- Rim light highlight on frame top-left -->
+    <path d="M 140 130 Q 120 180 118 238" stroke="#d4b07a" stroke-width="2" fill="none" opacity="0.6" filter="url(#glow)"/>
+    <path d="M 145 125 Q 125 178 122 238" stroke="#f0d4a0" stroke-width="1" fill="none" opacity="0.3"/>
+
+    <!-- STRING BED - Natural gut strings -->
+    <!-- Vertical strings (mains) - 14 strings -->
+    <g stroke="url(#gutString)" stroke-width="1" opacity="0.85">
+      <line x1="135" y1="110" x2="135" y2="366"/>
+      <line x1="143" y1="104" x2="143" y2="372"/>
+      <line x1="151" y1="100" x2="151" y2="376"/>
+      <line x1="159" y1="96" x2="159" y2="380"/>
+      <line x1="167" y1="94" x2="167" y2="382"/>
+      <line x1="175" y1="92" x2="175" y2="384"/>
+      <line x1="183" y1="92" x2="183" y2="384"/>
+      <line x1="191" y1="92" x2="191" y2="384"/>
+      <line x1="199" y1="92" x2="199" y2="384"/>
+      <line x1="207" y1="92" x2="207" y2="384"/>
+      <line x1="215" y1="92" x2="215" y2="384"/>
+      <line x1="223" y1="92" x2="223" y2="384"/>
+      <line x1="231" y1="94" x2="231" y2="382"/>
+      <line x1="239" y1="96" x2="239" y2="380"/>
+      <line x1="247" y1="100" x2="247" y2="376"/>
+      <line x1="255" y1="104" x2="255" y2="372"/>
+      <line x1="263" y1="110" x2="263" y2="366"/>
+    </g>
+    <!-- Horizontal strings (crosses) -->
+    <g stroke="url(#gutString)" stroke-width="0.9" opacity="0.75">
+      <line x1="102" y1="118" x2="298" y2="118"/>
+      <line x1="100" y1="130" x2="300" y2="130"/>
+      <line x1="99" y1="142" x2="301" y2="142"/>
+      <line x1="98" y1="154" x2="302" y2="154"/>
+      <line x1="97" y1="166" x2="303" y2="166"/>
+      <line x1="97" y1="178" x2="303" y2="178"/>
+      <line x1="97" y1="190" x2="303" y2="190"/>
+      <line x1="97" y1="202" x2="303" y2="202"/>
+      <line x1="97" y1="214" x2="303" y2="214"/>
+      <line x1="97" y1="226" x2="303" y2="226"/>
+      <line x1="97" y1="238" x2="303" y2="238"/>
+      <line x1="97" y1="250" x2="303" y2="250"/>
+      <line x1="97" y1="262" x2="303" y2="262"/>
+      <line x1="97" y1="274" x2="303" y2="274"/>
+      <line x1="98" y1="286" x2="302" y2="286"/>
+      <line x1="99" y1="298" x2="301" y2="298"/>
+      <line x1="100" y1="310" x2="300" y2="310"/>
+      <line x1="102" y1="322" x2="298" y2="322"/>
+      <line x1="106" y1="334" x2="294" y2="334"/>
+      <line x1="112" y1="346" x2="288" y2="346"/>
+      <line x1="120" y1="358" x2="280" y2="358"/>
+    </g>
+
+    <!-- THROAT (Yoke) - Wood reinforcement -->
+    <path d="M 152 380 L 148 420 L 160 430 L 200 435 L 240 430 L 252 420 L 248 380" fill="url(#woodGrain)" stroke="#8b5e32" stroke-width="1"/>
+    <!-- Throat screws/rivets detail -->
+    <circle cx="165" cy="400" r="3" fill="#c8a06a" stroke="#8b5e32" stroke-width="0.5"/>
+    <circle cx="235" cy="400" r="3" fill="#c8a06a" stroke="#8b5e32" stroke-width="0.5"/>
+    <circle cx="185" cy="420" r="3" fill="#c8a06a" stroke="#8b5e32" stroke-width="0.5"/>
+    <circle cx="215" cy="420" r="3" fill="#c8a06a" stroke="#8b5e32" stroke-width="0.5"/>
+
+    <!-- SHAFT / HANDLE -->
+    <!-- Shaft -->
+    <rect x="183" y="430" width="34" height="90" rx="3" fill="url(#woodGrain)" stroke="#8b5e32" stroke-width="0.8"/>
+    <!-- Shaft rim light -->
+    <rect x="183" y="430" width="4" height="90" rx="2" fill="#c8a06a" opacity="0.2"/>
+
+    <!-- LEATHER GRIP -->
+    <g opacity="0.95">
+      <!-- Grip wrap - leather strips -->
+      <rect x="181" y="520" width="38" height="120" rx="4" fill="url(#leatherGrip)" stroke="#4a2a18" stroke-width="1"/>
+      <!-- Leather wrap lines -->
+      <line x1="181" y1="535" x2="219" y2="530" stroke="#2a1208" stroke-width="1" opacity="0.6"/>
+      <line x1="181" y1="550" x2="219" y2="545" stroke="#2a1208" stroke-width="1" opacity="0.6"/>
+      <line x1="181" y1="565" x2="219" y2="560" stroke="#2a1208" stroke-width="1" opacity="0.6"/>
+      <line x1="181" y1="580" x2="219" y2="575" stroke="#2a1208" stroke-width="1" opacity="0.6"/>
+      <line x1="181" y1="595" x2="219" y2="590" stroke="#2a1208" stroke-width="1" opacity="0.6"/>
+      <line x1="181" y1="610" x2="219" y2="605" stroke="#2a1208" stroke-width="1" opacity="0.6"/>
+      <line x1="181" y1="625" x2="219" y2="620" stroke="#2a1208" stroke-width="1" opacity="0.6"/>
+      <!-- Grip highlight -->
+      <rect x="181" y="520" width="4" height="120" rx="2" fill="#8b5e32" opacity="0.15"/>
+      <!-- Butt cap -->
+      <rect x="179" y="636" width="42" height="14" rx="5" fill="#5c3d1e" stroke="#8b5e32" stroke-width="0.5"/>
+    </g>
+
+    <!-- Specular highlight on head top -->
+    <ellipse cx="185" cy="115" rx="18" ry="6" fill="white" opacity="0.06" filter="url(#glow)"/>
+  </g>
+
+  <!-- Era label -->
+  <text x="200" y="672" font-family="Georgia, serif" font-size="11" fill="#8b5e32" text-anchor="middle" letter-spacing="3" opacity="0.8">ERA I — WOOD</text>
+  <text x="200" y="688" font-family="Georgia, serif" font-size="9" fill="#5c3d1e" text-anchor="middle" letter-spacing="2" opacity="0.6">1968 – 1976</text>
+</svg>

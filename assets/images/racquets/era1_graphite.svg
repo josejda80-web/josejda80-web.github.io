@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" width="400" height="700">
+  <defs>
+    <radialGradient id="studioBg1" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+    <linearGradient id="graphiteFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a3a3a"/>
+      <stop offset="25%" stop-color="#1a1a1a"/>
+      <stop offset="50%" stop-color="#2a2a2a"/>
+      <stop offset="75%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#1e1e1e"/>
+    </linearGradient>
+    <linearGradient id="graphiteRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5a5a5a"/>
+      <stop offset="30%" stop-color="#2a2a2a"/>
+      <stop offset="70%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="nylonString" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8e8e8" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#b0b0b0" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="syntheticGrip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="20%" stop-color="#1a1a1a"/>
+      <stop offset="40%" stop-color="#0f0f0f"/>
+      <stop offset="60%" stop-color="#222"/>
+      <stop offset="80%" stop-color="#0f0f0f"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+    <filter id="coldRim">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="techGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Studio black background -->
+  <rect width="400" height="700" fill="url(#studioBg1)"/>
+
+  <!-- Floor shadow -->
+  <ellipse cx="200" cy="642" rx="95" ry="10" fill="#000" opacity="0.7"/>
+
+  <g transform="translate(200, 350) rotate(-12) translate(-200, -350)">
+
+    <!-- RACQUET HEAD - Geometric graphite frame -->
+    <!-- Shadow -->
+    <ellipse cx="202" cy="232" rx="107" ry="140" fill="#000" opacity="0.9"/>
+
+    <!-- Outer frame - matte graphite composite -->
+    <ellipse cx="200" cy="230" rx="105" ry="138" fill="url(#graphiteRim)" stroke="#444" stroke-width="0.5"/>
+    <!-- Frame body - slightly narrower than wood, more angular -->
+    <ellipse cx="200" cy="230" rx="100" ry="133" fill="url(#graphiteFrame)"/>
+    <!-- Frame inner edge -->
+    <ellipse cx="200" cy="230" rx="93" ry="126" fill="#030712"/>
+
+    <!-- Carbon weave texture hints -->
+    <ellipse cx="200" cy="230" rx="102" ry="135" fill="none" stroke="#333" stroke-width="0.6" opacity="0.5"/>
+    <ellipse cx="200" cy="230" rx="97" ry="130" fill="none" stroke="#222" stroke-width="0.4" opacity="0.4"/>
+
+    <!-- Rim light - cold blue-white on top-left edge -->
+    <path d="M 140 118 Q 118 172 115 230" stroke="#9ab8cc" stroke-width="2.5" fill="none" opacity="0.7" filter="url(#coldRim)"/>
+    <path d="M 143 115 Q 121 170 118 230" stroke="#d0e8f5" stroke-width="1" fill="none" opacity="0.4"/>
+
+    <!-- Brand wordmark - subtle grey on frame -->
+    <text x="172" y="228" font-family="Arial, sans-serif" font-size="7" fill="#555" letter-spacing="2" opacity="0.8">GRAPHITE PRO</text>
+
+    <!-- STRING BED - Nylon 18x20 dense pattern -->
+    <!-- Vertical mains - 18 strings -->
+    <g stroke="url(#nylonString)" stroke-width="0.9" opacity="0.9">
+      <line x1="131" y1="108" x2="131" y2="352"/>
+      <line x1="138" y1="102" x2="138" y2="358"/>
+      <line x1="145" y1="98" x2="145" y2="362"/>
+      <line x1="152" y1="94" x2="152" y2="366"/>
+      <line x1="159" y1="92" x2="159" y2="368"/>
+      <line x1="166" y1="90" x2="166" y2="370"/>
+      <line x1="173" y1="89" x2="173" y2="371"/>
+      <line x1="180" y1="88" x2="180" y2="372"/>
+      <line x1="187" y1="88" x2="187" y2="372"/>
+      <line x1="194" y1="88" x2="194" y2="372"/>
+      <line x1="201" y1="88" x2="201" y2="372"/>
+      <line x1="208" y1="88" x2="208" y2="372"/>
+      <line x1="215" y1="88" x2="215" y2="372"/>
+      <line x1="222" y1="89" x2="222" y2="371"/>
+      <line x1="229" y1="90" x2="229" y2="370"/>
+      <line x1="236" y1="92" x2="236" y2="368"/>
+      <line x1="243" y1="94" x2="243" y2="366"/>
+      <line x1="250" y1="98" x2="250" y2="362"/>
+      <line x1="257" y1="102" x2="257" y2="358"/>
+      <line x1="264" y1="108" x2="264" y2="352"/>
+    </g>
+    <!-- Horizontal crosses - 20 strings (denser) -->
+    <g stroke="url(#nylonString)" stroke-width="0.8" opacity="0.8">
+      <line x1="104" y1="112" x2="296" y2="112"/>
+      <line x1="102" y1="122" x2="298" y2="122"/>
+      <line x1="100" y1="132" x2="300" y2="132"/>
+      <line x1="99" y1="142" x2="301" y2="142"/>
+      <line x1="98" y1="152" x2="302" y2="152"/>
+      <line x1="97" y1="162" x2="303" y2="162"/>
+      <line x1="97" y1="172" x2="303" y2="172"/>
+      <line x1="97" y1="182" x2="303" y2="182"/>
+      <line x1="97" y1="192" x2="303" y2="192"/>
+      <line x1="97" y1="202" x2="303" y2="202"/>
+      <line x1="97" y1="212" x2="303" y2="212"/>
+      <line x1="97" y1="222" x2="303" y2="222"/>
+      <line x1="97" y1="232" x2="303" y2="232"/>
+      <line x1="97" y1="242" x2="303" y2="242"/>
+      <line x1="97" y1="252" x2="303" y2="252"/>
+      <line x1="97" y1="262" x2="303" y2="262"/>
+      <line x1="97" y1="272" x2="303" y2="272"/>
+      <line x1="98" y1="282" x2="302" y2="282"/>
+      <line x1="99" y1="292" x2="301" y2="292"/>
+      <line x1="100" y1="302" x2="300" y2="302"/>
+      <line x1="102" y1="312" x2="298" y2="312"/>
+      <line x1="104" y1="322" x2="296" y2="322"/>
+      <line x1="108" y1="332" x2="292" y2="332"/>
+      <line x1="115" y1="342" x2="285" y2="342"/>
+    </g>
+
+    <!-- THROAT - Graphite yoke, geometric -->
+    <path d="M 158 370 L 154 410 L 162 422 L 200 428 L 238 422 L 246 410 L 242 370" fill="url(#graphiteFrame)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <!-- Throat structural lines - industrial -->
+    <line x1="175" y1="372" x2="168" y2="420" stroke="#555" stroke-width="0.6" opacity="0.5"/>
+    <line x1="225" y1="372" x2="232" y2="420" stroke="#555" stroke-width="0.6" opacity="0.5"/>
+
+    <!-- SHAFT - narrow graphite -->
+    <rect x="186" y="424" width="28" height="88" rx="2" fill="url(#graphiteFrame)" stroke="#3a3a3a" stroke-width="0.8"/>
+    <!-- Shaft rim light -->
+    <rect x="186" y="424" width="3" height="88" rx="1.5" fill="#9ab8cc" opacity="0.15"/>
+
+    <!-- SYNTHETIC GRIP - black perforated -->
+    <rect x="184" y="512" width="32" height="118" rx="3" fill="url(#syntheticGrip)" stroke="#1a1a1a" stroke-width="1"/>
+    <!-- Grip texture - diagonal wrap -->
+    <line x1="184" y1="526" x2="216" y2="520" stroke="#333" stroke-width="1" opacity="0.7"/>
+    <line x1="184" y1="540" x2="216" y2="534" stroke="#333" stroke-width="1" opacity="0.7"/>
+    <line x1="184" y1="554" x2="216" y2="548" stroke="#333" stroke-width="1" opacity="0.7"/>
+    <line x1="184" y1="568" x2="216" y2="562" stroke="#333" stroke-width="1" opacity="0.7"/>
+    <line x1="184" y1="582" x2="216" y2="576" stroke="#333" stroke-width="1" opacity="0.7"/>
+    <line x1="184" y1="596" x2="216" y2="590" stroke="#333" stroke-width="1" opacity="0.7"/>
+    <line x1="184" y1="610" x2="216" y2="604" stroke="#333" stroke-width="1" opacity="0.7"/>
+    <line x1="184" y1="624" x2="216" y2="618" stroke="#333" stroke-width="1" opacity="0.7"/>
+    <!-- Grip cold rim highlight -->
+    <rect x="184" y="512" width="3" height="118" rx="1.5" fill="#9ab8cc" opacity="0.08"/>
+    <!-- Butt cap -->
+    <rect x="182" y="626" width="36" height="14" rx="4" fill="#111" stroke="#2a2a2a" stroke-width="0.8"/>
+    <rect x="188" y="629" width="24" height="8" rx="2" fill="#0a0a0a" stroke="#333" stroke-width="0.3"/>
+
+    <!-- Specular hit on frame -->
+    <ellipse cx="183" cy="108" rx="14" ry="5" fill="#9ab8cc" opacity="0.08" filter="url(#techGlow)"/>
+  </g>
+
+  <!-- Era label -->
+  <text x="200" y="672" font-family="'Arial', monospace" font-size="10" fill="#555" text-anchor="middle" letter-spacing="4" opacity="0.9">ERA II — GRAPHITE</text>
+  <text x="200" y="688" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle" letter-spacing="2" opacity="0.7">1985 – 1999</text>
+</svg>

@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" width="400" height="700">
+  <defs>
+    <radialGradient id="studioBg3" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#060610"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+    <linearGradient id="carbonFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#252525"/>
+      <stop offset="15%" stop-color="#0f0f0f"/>
+      <stop offset="35%" stop-color="#1a1a1a"/>
+      <stop offset="55%" stop-color="#080808"/>
+      <stop offset="75%" stop-color="#161616"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="carbonRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a4a5a"/>
+      <stop offset="20%" stop-color="#252530"/>
+      <stop offset="50%" stop-color="#0f0f18"/>
+      <stop offset="80%" stop-color="#080810"/>
+      <stop offset="100%" stop-color="#030308"/>
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ffea" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#00d4c8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#008888" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="techGrip3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#050508"/>
+      <stop offset="30%" stop-color="#0f0f18"/>
+      <stop offset="50%" stop-color="#080810"/>
+      <stop offset="70%" stop-color="#121220"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </linearGradient>
+    <!-- Carbon fiber weave pattern -->
+    <pattern id="carbonWeave" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#0d0d0d"/>
+      <rect x="0" y="0" width="4" height="4" fill="#161616" opacity="0.8"/>
+      <rect x="4" y="4" width="4" height="4" fill="#161616" opacity="0.8"/>
+      <rect x="1" y="1" width="2" height="2" fill="#1e1e1e" opacity="0.5"/>
+      <rect x="5" y="5" width="2" height="2" fill="#1e1e1e" opacity="0.5"/>
+    </pattern>
+    <filter id="cyanGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cyanIntense">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0  1 1 1 1 0  0.9 0.9 0.9 0.9 0  0 0 0 0.8 0" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="rimCold">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Studio black background -->
+  <rect width="400" height="700" fill="url(#studioBg3)"/>
+
+  <!-- Subtle cyan floor glow -->
+  <ellipse cx="200" cy="644" rx="80" ry="8" fill="#00ffea" opacity="0.04"/>
+
+  <g transform="translate(200, 345) rotate(-10) translate(-200, -345)">
+
+    <!-- RACQUET HEAD - Aerodynamic modern frame -->
+    <!-- Deep shadow -->
+    <ellipse cx="202" cy="222" rx="108" ry="138" fill="#000" opacity="0.95"/>
+
+    <!-- Outer frame - carbon graphene composite -->
+    <ellipse cx="200" cy="220" rx="106" ry="136" fill="url(#carbonRim)"/>
+    <!-- Carbon weave texture on frame -->
+    <ellipse cx="200" cy="220" rx="101" ry="131" fill="url(#carbonWeave)"/>
+    <!-- Frame inner edge -->
+    <ellipse cx="200" cy="220" rx="94" ry="124" fill="#030712"/>
+
+    <!-- Cold blue-white rim light on left edge -->
+    <path d="M 138 104 Q 116 160 112 220" stroke="#c8e8ff" stroke-width="3" fill="none" opacity="0.5" filter="url(#rimCold)"/>
+    <path d="M 140 102 Q 118 158 114 220" stroke="#e8f8ff" stroke-width="1.2" fill="none" opacity="0.3"/>
+
+    <!-- Subtle cyan accent on lower right frame -->
+    <path d="M 262 280 Q 296 240 295 220 Q 294 195 278 162" stroke="#00ffea" stroke-width="1.5" fill="none" opacity="0.12" filter="url(#cyanGlow)"/>
+
+    <!-- STRING BED - Monofilament neon cyan, high tension -->
+    <!-- Vertical mains - 16 strings with neon cyan -->
+    <g stroke="url(#neonCyan)" stroke-width="1.1" opacity="0.92" filter="url(#cyanGlow)">
+      <line x1="133" y1="100" x2="133" y2="340"/>
+      <line x1="140" y1="94" x2="140" y2="346"/>
+      <line x1="148" y1="90" x2="148" y2="350"/>
+      <line x1="156" y1="86" x2="156" y2="354"/>
+      <line x1="164" y1="84" x2="164" y2="356"/>
+      <line x1="172" y1="82" x2="172" y2="358"/>
+      <line x1="180" y1="81" x2="180" y2="359"/>
+      <line x1="188" y1="81" x2="188" y2="359"/>
+      <line x1="196" y1="81" x2="196" y2="359"/>
+      <line x1="204" y1="81" x2="204" y2="359"/>
+      <line x1="212" y1="81" x2="212" y2="359"/>
+      <line x1="220" y1="82" x2="220" y2="358"/>
+      <line x1="228" y1="84" x2="228" y2="356"/>
+      <line x1="236" y1="86" x2="236" y2="354"/>
+      <line x1="244" y1="90" x2="244" y2="350"/>
+      <line x1="252" y1="94" x2="252" y2="346"/>
+      <line x1="260" y1="100" x2="260" y2="340"/>
+    </g>
+    <!-- Horizontal crosses - neon cyan -->
+    <g stroke="url(#neonCyan)" stroke-width="0.9" opacity="0.82" filter="url(#cyanGlow)">
+      <line x1="106" y1="106" x2="294" y2="106"/>
+      <line x1="103" y1="116" x2="297" y2="116"/>
+      <line x1="101" y1="126" x2="299" y2="126"/>
+      <line x1="99" y1="136" x2="301" y2="136"/>
+      <line x1="98" y1="146" x2="302" y2="146"/>
+      <line x1="97" y1="156" x2="303" y2="156"/>
+      <line x1="97" y1="166" x2="303" y2="166"/>
+      <line x1="97" y1="176" x2="303" y2="176"/>
+      <line x1="97" y1="186" x2="303" y2="186"/>
+      <line x1="97" y1="196" x2="303" y2="196"/>
+      <line x1="97" y1="206" x2="303" y2="206"/>
+      <line x1="97" y1="216" x2="303" y2="216"/>
+      <line x1="97" y1="226" x2="303" y2="226"/>
+      <line x1="97" y1="236" x2="303" y2="236"/>
+      <line x1="97" y1="246" x2="303" y2="246"/>
+      <line x1="97" y1="256" x2="303" y2="256"/>
+      <line x1="97" y1="266" x2="303" y2="266"/>
+      <line x1="97" y1="276" x2="303" y2="276"/>
+      <line x1="98" y1="286" x2="302" y2="286"/>
+      <line x1="100" y1="296" x2="300" y2="296"/>
+      <line x1="102" y1="306" x2="298" y2="306"/>
+      <line x1="106" y1="316" x2="294" y2="316"/>
+      <line x1="112" y1="326" x2="288" y2="326"/>
+    </g>
+
+    <!-- THROAT - Asymmetric aerodynamic yoke -->
+    <!-- Carbon asymmetric throat design -->
+    <path d="M 162 358 L 156 398 L 164 415 L 200 422 L 236 415 L 244 398 L 238 358 L 220 352 L 200 350 L 180 352 Z" fill="url(#carbonWeave)" stroke="#2a2a3a" stroke-width="1"/>
+    <!-- Throat aero channel -->
+    <path d="M 178 360 Q 200 348 222 360 L 222 400 Q 200 408 178 400 Z" fill="#030712" opacity="0.6"/>
+    <!-- Throat cyan accent -->
+    <path d="M 170 380 L 230 380" stroke="#00ffea" stroke-width="0.8" opacity="0.15"/>
+
+    <!-- SHAFT - narrow, aerodynamic -->
+    <rect x="187" y="418" width="26" height="86" rx="2" fill="url(#carbonFrame)" stroke="#2a2a3a" stroke-width="0.8"/>
+    <!-- Shaft carbon weave -->
+    <rect x="187" y="418" width="26" height="86" rx="2" fill="url(#carbonWeave)" opacity="0.5"/>
+    <!-- Shaft cold rim -->
+    <rect x="187" y="418" width="3" height="86" rx="1.5" fill="#c8e8ff" opacity="0.1"/>
+
+    <!-- TECH GRIP - aerogel/synthetic -->
+    <rect x="185" y="504" width="30" height="116" rx="3" fill="url(#techGrip3)" stroke="#1a1a2a" stroke-width="1"/>
+    <!-- Grip carbon pattern -->
+    <rect x="185" y="504" width="30" height="116" rx="3" fill="url(#carbonWeave)" opacity="0.3"/>
+    <!-- Grip perforations/texture -->
+    <line x1="185" y1="518" x2="215" y2="514" stroke="#1e1e2e" stroke-width="1.2" opacity="0.8"/>
+    <line x1="185" y1="530" x2="215" y2="526" stroke="#1e1e2e" stroke-width="1.2" opacity="0.8"/>
+    <line x1="185" y1="542" x2="215" y2="538" stroke="#1e1e2e" stroke-width="1.2" opacity="0.8"/>
+    <line x1="185" y1="554" x2="215" y2="550" stroke="#1e1e2e" stroke-width="1.2" opacity="0.8"/>
+    <line x1="185" y1="566" x2="215" y2="562" stroke="#1e1e2e" stroke-width="1.2" opacity="0.8"/>
+    <line x1="185" y1="578" x2="215" y2="574" stroke="#1e1e2e" stroke-width="1.2" opacity="0.8"/>
+    <line x1="185" y1="590" x2="215" y2="586" stroke="#1e1e2e" stroke-width="1.2" opacity="0.8"/>
+    <line x1="185" y1="602" x2="215" y2="598" stroke="#1e1e2e" stroke-width="1.2" opacity="0.8"/>
+    <line x1="185" y1="614" x2="215" y2="610" stroke="#1e1e2e" stroke-width="1.2" opacity="0.8"/>
+    <!-- Grip cyan micro-accent -->
+    <rect x="185" y="504" width="2.5" height="116" rx="1.25" fill="#00ffea" opacity="0.06"/>
+    <!-- Butt cap - tech -->
+    <rect x="183" y="617" width="34" height="13" rx="3" fill="#080812" stroke="#1a1a2a" stroke-width="0.8"/>
+    <line x1="190" y1="623.5" x2="210" y2="623.5" stroke="#00ffea" stroke-width="0.5" opacity="0.2"/>
+
+    <!-- Specular hit on frame - intense cold white -->
+    <ellipse cx="180" cy="100" rx="10" ry="4" fill="#c8e8ff" opacity="0.15" filter="url(#cyanIntense)"/>
+    <!-- String glow point at center -->
+    <ellipse cx="200" cy="220" rx="20" ry="18" fill="#00ffea" opacity="0.02" filter="url(#cyanGlow)"/>
+  </g>
+
+  <!-- Era label -->
+  <text x="200" y="670" font-family="'Arial', monospace" font-size="10" fill="#00ffea" text-anchor="middle" letter-spacing="4" opacity="0.7">ERA III — GRAPHENE</text>
+  <text x="200" y="686" font-family="Arial, sans-serif" font-size="9" fill="#008888" text-anchor="middle" letter-spacing="2" opacity="0.6">2015 – PRESENT</text>
+</svg>
